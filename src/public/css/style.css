@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-   background: url(../files/imagen.jpg);
+    background: url(../files/imagen.jpg);
     background-size: cover;
     background-attachment: fixed;
 }

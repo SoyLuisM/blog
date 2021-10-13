@@ -5,7 +5,7 @@ const router = function (server) {
     server.get('/',(req,res)=>{
         res.send('holaaaa');
     });
-    server.use('/app', express.static('./src/public'));
+    server.use('/app', express.static(path.join(__dirname,'../public')));
 }
 
 module.exports = router
