@@ -3,9 +3,11 @@ const path = require('path');
 
 const router = function (server) {
     server.get('/',(req,res)=>{
-        res.send('holaaaa');
+        res.render('index.hbs');
     });
     server.use('/app', express.static(path.join(__dirname,'../public')));
+    server.use('/assets', express.static(path.join(__dirname,'../public/css')));
+    server.use('/img', express.static(path.join(__dirname,'../public/files')));
 }
 
 module.exports = router
