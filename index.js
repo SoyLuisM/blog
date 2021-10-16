@@ -24,3 +24,14 @@ router(app);
 app.listen(config.port, ()=>{
     console.log(`escuchando en el puerto: ${config.port}`);
 });
+
+//capura promesas no capturadas
+process.on('unhandledRejection',error =>{
+    // console.error('UnhandledRejection',error)
+    server.log('unhandledRejection',error)
+})
+//captura excepciones no capturadas
+process.on('uncaughtException',error =>{
+    // console.error('UncaughtException',error)
+    server.log('UncaughtException',error)
+})
